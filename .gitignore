@@ -1,3 +1,7 @@
 venv/*
 build/*
 Output/*
+__pycache__/*
+
+setup.iss
+setup.py
