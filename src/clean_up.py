@@ -1,7 +1,7 @@
 import os
 import shutil
 
-dir_1 = "build/exe.win-amd64-3.10/lib/PySide6"
+dir_1 = "D:/Personal Projects/PassGen/build/lib/PySide6"
 
 def clean_up():
     print("getting all unnecessary modules to be deleted...")
@@ -25,11 +25,16 @@ def clean_up():
                     os.remove(os.path.join(dir_1, file_name))
     print("done\n")
     
-    print("deleting all unnecessary modules...")
+    print("deleting all unnecessary folders...")
     for folder_name in os.listdir(dir_1):
             if os.path.isdir(os.path.join(dir_1, folder_name)):
                 if folder_name in unecessary_folders:
                     shutil.rmtree(os.path.join(dir_1, folder_name))
+    print("done\n")
+    
+    print("deleting '__pycache__' and 'build' folders...") 
+    shutil.rmtree("__pycache__")
+    shutil.rmtree("build")
     print("done\n")
     
     print("clean up complete")
