@@ -6,14 +6,14 @@ dir_1 = "build/exe.win-amd64-3.10/lib/PySide6"
 def clean_up():
     print("getting all unnecessary modules to be deleted...")
     unecessary_modules = []
-    with open("unnecessary_modules.txt", "r") as f:
+    with open("../unnecessary_modules.txt", "r") as f:
         content = f.readlines()
         unecessary_modules = [x.strip() for x in content]
     print("done\n")
     
     print("getting all unnecessary folders to be deleted...")
     unecessary_folders = []
-    with open("unnecessary_folders.txt", "r") as f:
+    with open("../unnecessary_folders.txt", "r") as f:
         content = f.readlines()
         unecessary_folders = [x.strip() for x in content]
     print("done\n")
