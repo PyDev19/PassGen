@@ -11,7 +11,8 @@ build_exe_options = {
     "packages": packages,
     "include_files": files,
     "excludes": exclude,
-    'build_exe': output_dir
+    'build_exe': output_dir,
+    "build-base": output_dir
 }
 
 base = None
