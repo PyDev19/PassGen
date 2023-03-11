@@ -1,40 +1,37 @@
 import os
 import shutil
 
-dir_1 = "D:/Personal Projects/PassGen/build/lib/PySide6"
+lib_path = os.path.abspath("build/lib/PySide6")
+file_path = os.path.abspath("unnecessary_modules.txt")
+folder_path = os.path.abspath("unnecessary_folders.txt")
 
 def clean_up():
     print("getting all unnecessary modules to be deleted...")
     unecessary_modules = []
-    with open("../unnecessary_modules.txt", "r") as f:
+    with open(file_path, "r") as f:
         content = f.readlines()
         unecessary_modules = [x.strip() for x in content]
     print("done\n")
     
     print("getting all unnecessary folders to be deleted...")
     unecessary_folders = []
-    with open("../unnecessary_folders.txt", "r") as f:
+    with open(folder_path, "r") as f:
         content = f.readlines()
         unecessary_folders = [x.strip() for x in content]
     print("done\n")
     
     print("deleting all unnecessary modules...")
-    for file_name in os.listdir(dir_1):
-            if os.path.isfile(os.path.join(dir_1, file_name)):
+    for file_name in os.listdir(lib_path):
+            if os.path.isfile(os.path.join(lib_path, file_name)):
                 if file_name in unecessary_modules:
-                    os.remove(os.path.join(dir_1, file_name))
+                    os.remove(os.path.join(lib_path, file_name))
     print("done\n")
     
     print("deleting all unnecessary folders...")
-    for folder_name in os.listdir(dir_1):
-            if os.path.isdir(os.path.join(dir_1, folder_name)):
+    for folder_name in os.listdir(lib_path):
+            if os.path.isdir(os.path.join(lib_path, folder_name)):
                 if folder_name in unecessary_folders:
-                    shutil.rmtree(os.path.join(dir_1, folder_name))
-    print("done\n")
-    
-    print("deleting '__pycache__' and 'build' folders...") 
-    shutil.rmtree("__pycache__")
-    shutil.rmtree("build")
+                    shutil.rmtree(os.path.join(lib_path, folder_name))
     print("done\n")
     
     print("clean up complete")
