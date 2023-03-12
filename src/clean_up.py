@@ -1,7 +1,7 @@
 import os
 import shutil
 
-lib_path = os.path.abspath("build/lib/PySide6")
+lib_path = os.path.abspath("build/app/lib/PySide6")
 file_path = os.path.abspath("unnecessary_modules.txt")
 folder_path = os.path.abspath("unnecessary_folders.txt")
 
