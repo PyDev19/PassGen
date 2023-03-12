@@ -1,18 +1,14 @@
 import random
 import array
 
-from PySide6.QtCore import Slot, QObject
-
-class Backend(QObject):
+class Backend():
     def __init__(self):
-        super().__init__()
         self.DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
         self.LOCASE_CHARACTERS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
         self.UPCASE_CHARACTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-        self.SYMBOLS = ['@', '#', '$', '%', '=', ':', '?', '.', '/', '|', '~', '>', '*', '(', ')', '<']
+        self.SYMBOLS = ['!', '@', '#', '$', '%', '^', '&', ';', ',', '>', '}', '{', '[', ']', '=', ':', '?', '.', '/', '|', '~', '>', '*', '(', ')', '<', '`', '+', '-', '_']
     
-    @Slot(int, bool, bool, bool, result=str)
-    def generate_password(self, length, locase, upcase, symbols):
+    def generate_password(self, length: int, locase: bool, upcase: bool, symbols: bool) -> str:
         COMBINED_LIST = self.DIGITS
         rand_digit = random.choice(self.DIGITS)
         temp_pass = rand_digit
