@@ -45,11 +45,11 @@ QCheckBox::indicator {
 }
 
 QCheckBox::indicator:unchecked {
-    image: url(src/images/unchecked_checkbox.png);
+    image: url(images/unchecked_checkbox.png);
 }
 
 QCheckBox::indicator:checked {
-    image: url(src/images/checked_checkbox.png);
+    image: url(images/checked_checkbox.png);
 }
 
 QPushButton {
