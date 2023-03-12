@@ -15,7 +15,7 @@ class GUI(QMainWindow):
         
         # Set title and icon of window
         self.setWindowTitle("PassGen")
-        self.setWindowIcon(QIcon("src/images/icon.ico"))
+        self.setWindowIcon(QIcon("images/icon.ico"))
         
         # Get screen size
         self.app = app
@@ -39,7 +39,7 @@ class GUI(QMainWindow):
     
     def add_style(self):
         # Reads style.qss file
-        with open("src/style.qss", "r") as file:
+        with open("styles/style.qss", "r") as file:
             # Stores contents of file in variable
             self.style_sheet = file.read()
     
