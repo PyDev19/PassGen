@@ -5,7 +5,7 @@ files = ['compiled_files/backend.pyc', 'compiled_files/gui.pyc', 'images/', 'sty
 packages = ["sys", "PySide6.QtGui", "PySide6.QtQml", "PySide6.QtCore", "random", "array"]
 exclude = ["tkinter", "asyncio", "concurrent", "ctypes", "distutils", "email", "html", "http", "lib2to3",
            "multiprocessing", "pydoc_data", "test", "unittest", "xml", "xmlrpc"]
-output_dir = "build"
+output_dir = "build/app"
 
 build_exe_options = {
     "packages": packages,
