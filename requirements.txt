@@ -1,7 +1,8 @@
-cx-Freeze==6.13.1
+cx-Freeze==6.14.7
+cx-Logging==3.1.0
 lief==0.12.3
 packaging==22.0
-PySide6==6.4.1
-PySide6-Addons==6.4.1
-PySide6-Essentials==6.4.1
-shiboken6==6.4.1
+PySide6==6.4.2
+PySide6-Addons==6.4.2
+PySide6-Essentials==6.4.2
+shiboken6==6.4.2
