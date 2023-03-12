@@ -1,0 +1,74 @@
+QFrame#mainFrame  {
+    background-color: #303030;
+}
+
+QLineEdit#generatedPassword {
+    background-color: transparent;
+
+    color: white;
+    font-family: "Courier New";
+    font-size: 30px;
+
+    border: none;
+    border-bottom: 3px solid #EF9A9A;
+}
+
+QLabel#passwordLenghtPassword {
+    background-color: transparent;
+
+    color: white;
+    font-family: "Courier New";
+    font-size: 25px;
+}
+
+QLineEdit#passwordLenghtPasswordEntry {
+    background-color: transparent;
+
+    color: white;
+    font-family: "Courier New";
+    font-size: 25px;
+
+    border: none;
+    border-bottom: 3px solid #EF9A9A;
+}
+
+QCheckBox {
+    color: white;
+
+    font-family: "Courier New";
+    font-size: 25px;
+}
+
+QCheckBox::indicator {
+    width: 25px;
+    height: 25px;
+}
+
+QCheckBox::indicator:unchecked {
+    image: url(src/images/unchecked_checkbox.png);
+}
+
+QCheckBox::indicator:checked {
+    image: url(src/images/checked_checkbox.png);
+}
+
+QPushButton {
+    background: #3d3d3d;
+    color: white;
+
+    border: 2px solid #3d3d3d;
+    border-radius: 10px;
+
+    font-family: "Courier New";
+    font-size: 27px;
+}
+
+QPushButton::hover {
+    background: #888888;
+    color: white;
+}
+
+QPushButton::pressed  {
+    background: #EF9A9A;
+    color: white;
+}
