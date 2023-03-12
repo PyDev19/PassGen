@@ -6,3 +6,5 @@ scripts
 resources
 glue
 lib
+examples
+qml
