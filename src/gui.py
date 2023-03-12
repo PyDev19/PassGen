@@ -15,7 +15,7 @@ class GUI(QMainWindow):
         
         # Set title and icon of window
         self.setWindowTitle("PassGen")
-        self.setWindowIcon(QIcon("src/icon.ico"))
+        self.setWindowIcon(QIcon("src/images/icon.ico"))
         
         # Get screen size
         self.app = app
