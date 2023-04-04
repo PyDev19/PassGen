@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "& ${workspaceFolder}/env/Scripts/Activate.ps1 && python -m build_app.compile && python -m build_app.setup build && python -m build_app.clean_up",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+        }
+    ]
+}
