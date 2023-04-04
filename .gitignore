@@ -1,7 +1,7 @@
-venv/*
+env/*
 build/*
 Output/*
-src/__pycache__/*
+__pycache__/
 compiled_files/*
 src/build/*
 
