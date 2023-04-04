@@ -1,6 +1,7 @@
 import os
 import shutil
 
+app_lib_path = os.path.abspath('build/app')
 lib_path = os.path.abspath("build/app/lib/PySide6")
 file_path = os.path.abspath("unnecessary_modules.txt")
 folder_path = os.path.abspath("unnecessary_folders.txt")
@@ -32,6 +33,12 @@ def clean_up():
             if os.path.isdir(os.path.join(lib_path, folder_name)):
                 if folder_name in unecessary_folders:
                     shutil.rmtree(os.path.join(lib_path, folder_name))
+    print("done\n")
+    
+    print('deleting all unnescessary .dll files...')
+    for file in os.listdir(app_lib_path):
+        if file.startswith('api-ms-win') and file.endswith('.dll'):
+            os.remove(os.path.join(app_lib_path, file))
     print("done\n")
     
     print("clean up complete")

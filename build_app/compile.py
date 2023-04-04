@@ -1,7 +1,7 @@
 import py_compile
 
 files = ["src/main.py", "src/backend.py", "src/gui.py"]
-output_dir = "compiled_files"
+output_dir = "build/compiled_files"
 
 for file in files:
     output_file = file.split('/')[1]

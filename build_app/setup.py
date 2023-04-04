@@ -1,7 +1,7 @@
 import sys
 from cx_Freeze import setup, Executable
 
-files = ['compiled_files/backend.pyc', 'compiled_files/gui.pyc', 'images/', 'styles/']
+files = ['build/compiled_files/backend.pyc', 'build/compiled_files/gui.pyc', 'images/', 'styles/']
 packages = ["sys", "PySide6.QtGui", "PySide6.QtQml", "PySide6.QtCore", "random", "array"]
 exclude = ["tkinter", "asyncio", "concurrent", "ctypes", "distutils", "email", "html", "http", "lib2to3",
            "multiprocessing", "pydoc_data", "test", "unittest", "xml", "xmlrpc"]
